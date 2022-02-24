@@ -82,11 +82,6 @@ public class TC_AddCustomerTest_003 extends BaseClass{
 	    }
 	}
 	
-	public String randomstring()
-	{
-		String generateString=RandomStringUtils.randomAlphabetic(8);
-		return generateString;
-	}
 }
 
 

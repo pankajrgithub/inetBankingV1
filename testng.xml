@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite name="inetbankingV1">
+<suite name="inetbankingV1" parallel="tests">
 
 <listeners>
 <listener class-name="com.inetBanking.utilities.Reporting"/>
@@ -9,14 +9,58 @@
 <test name="logintest">
 
 
+<parameter name="browser" value="firefox"/>
+<classes>
+
+  <class name="com.inetBanking.testCases.TC_LoginTest_001"/> 
+
+  <class name="com.inetBanking.testCases.TC_LoginDDT_002"/>
+ 
+ <class name="com.inetBanking.testCases.TC_AddCustomerTest_003"/> 
+  
+    <class name="com.inetBanking.testCases.TC_EditCustomerInfoTest_004"/>
+  
+    <class name="com.inetBanking.testCases.TC_DelCustomerTest_005"/> 
+  
+  <class name="com.inetBanking.testCases.TC_NewAccountTest_006"/>
+  
+  <class name="com.inetBanking.testCases.TC_EditAccountTest_007"/>  
+
+ <class name="com.inetBanking.testCases.TC_DelAccountTest_008"/>  
+
+  <class name="com.inetBanking.testCases.TC_DepositTest_009"/> 
+
+
+<class name="com.inetBanking.testCases.TC_WithdrwalTest_010"/>
+
+</classes>
+
+</test>
+
+<test name="logintest">
 <parameter name="browser" value="chrome"/>
 <classes>
 
- <class name="com.inetBanking.testCases.TC_LoginTest_001"/> 
+  <class name="com.inetBanking.testCases.TC_LoginTest_001"/> 
 
- <!--   <class name="com.inetBanking.testCases.TC_LoginDDT_002"/> -->
+  <class name="com.inetBanking.testCases.TC_LoginDDT_002"/>
  
-  <class name="com.inetBanking.testCases.TC_AddCustomerTest_003"/> 
+ <class name="com.inetBanking.testCases.TC_AddCustomerTest_003"/> 
+  
+    <class name="com.inetBanking.testCases.TC_EditCustomerInfoTest_004"/>
+  
+    <class name="com.inetBanking.testCases.TC_DelCustomerTest_005"/> 
+  
+  <class name="com.inetBanking.testCases.TC_NewAccountTest_006"/>
+  
+  <class name="com.inetBanking.testCases.TC_EditAccountTest_007"/>  
+
+ <class name="com.inetBanking.testCases.TC_DelAccountTest_008"/>  
+
+  <class name="com.inetBanking.testCases.TC_DepositTest_009"/> 
+
+
+<class name="com.inetBanking.testCases.TC_WithdrwalTest_010"/>
 
 </classes>
 
